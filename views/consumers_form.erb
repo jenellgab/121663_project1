@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Buy Product : Aling Nena </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/2bootstrap.css" rel="stylesheet">
+
+    <link href="/css/admin.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Home</a>
+	<a class="navbar-brand" href="/about">About us</a>
+	<a class="navbar-brand" href="/products">Products</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+	
+      <div class="admin">
+
+        <form role="form" method="POST" action="<%= "/buy/#{@product.id}" %>">
+          <form class="form-horizontal" role="form">
+	<h2>  <%= " Buy #{@product.name} ( P #{@product.price} ) " %> </h2>
+	<div class="form-group">
+              <label for="quantity" class="col-sm-2 control-label">Quantity</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="quantity">
+              </div>
+            </div>
+        <h2>Payment</h2>
+            <div class="form-group">
+              <label for="ones" class="col-sm-2 control-label">One</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="ones">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fives" class="col-sm-2 control-label">Five</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="fives">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tens" class="col-sm-2 control-label">Ten</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="tens">
+              </div>
+            </div>
+		<div class="form-group">
+              <label for="twenty" class="col-sm-2 control-label">Twenty</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="twenty">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fifty" class="col-sm-2 control-label">Fifty</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="fifty">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="hundred" class="col-sm-2 control-label"> One Hundred</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="hundred">
+              </div>
+            </div>
+		<div class="form-group">
+              <label for="fhundred" class="col-sm-2 control-label"> Five Hundred</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="fhundred">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="thousand" class="col-sm-2 control-label"> One Thousand</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="thousand">
+              </div>
+            </div>
+		<input type="submit" class="btn btn-default btn-primary" value ="Submit"/>
+		<a href="/products" class="btn btn-default">Back</a>
+          </form>
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
